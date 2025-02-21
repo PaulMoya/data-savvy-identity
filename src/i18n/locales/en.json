@@ -5,8 +5,20 @@
   "description": "I design and optimize data operations, automate workflows, and create insightful data outputs. Strong in SQL, Python, cloud technologies, and Visualizations.",
   "experience": "Industry Experience: Banking, Government Finance, Retail, Telecommunications, and BPO's.",
   "consultation": {
-    "title": "30 Minutes Data Assessment Call",
-    "subtitle": "This 30-minute consultation is designed to understand your data operations challenges and determine the right next steps for your project.",
+    "title": "Data Assessment Call",
+    "subtitle": "Choose the consultation option that best fits your needs.",
+    "options": {
+      "free": {
+        "title": "30-Minute Free Assessment",
+        "price": "Free",
+        "description": "Quick overview and initial guidance for your data project"
+      },
+      "paid": {
+        "title": "1-Hour Deep Dive",
+        "price": "$60 USD",
+        "description": "Comprehensive analysis and detailed action plan"
+      }
+    },
     "whatYouGet": "What You Get:",
     "benefits": {
       "1": "A brief discussion about your project goals and challenges",
@@ -15,6 +27,9 @@
       "4": "Clarity on next steps for your project or recommend alternatives"
     },
     "perfect": "Perfect for startups, businesses, or individuals looking to enhance their data operations strategy efficiently.",
-    "cta": "Schedule a Free Consultation"
+    "cta": {
+      "free": "Schedule Free Consultation",
+      "paid": "Book Deep Dive Session"
+    }
   }
 }
