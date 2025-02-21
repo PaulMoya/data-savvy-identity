@@ -98,33 +98,41 @@ const Index = () => {
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {/* Free Consultation Card */}
-              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="text-xl font-semibold mb-2">{t('consultation.options.free.title')}</h3>
-                <p className="text-2xl font-bold text-gray-800 mb-4">{t('consultation.options.free.price')}</p>
-                <p className="text-gray-600 mb-6">{t('consultation.options.free.description')}</p>
-                <a
-                  href="https://cal.com/jose.moya/30?user=Jose.Moya"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center px-4 py-2 border border-gray-800 text-gray-800 rounded-md hover:bg-gray-800 hover:text-white transition-colors duration-200"
-                >
-                  {t('consultation.cta.free')}
-                </a>
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{t('consultation.options.free.title')}</h3>
+                  <p className="text-2xl font-bold text-gray-800 mb-4">{t('consultation.options.free.price')}</p>
+                  <p className="text-gray-600">{t('consultation.options.free.description')}</p>
+                </div>
+                <div className="mt-6">
+                  <a
+                    href="https://cal.com/jose.moya/30?user=Jose.Moya"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center px-4 py-2 border border-gray-800 text-gray-800 rounded-md hover:bg-gray-800 hover:text-white transition-colors duration-200"
+                  >
+                    {t('consultation.cta.free')}
+                  </a>
+                </div>
               </div>
 
               {/* Paid Consultation Card */}
-              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border-2 border-gray-800">
-                <h3 className="text-xl font-semibold mb-2">{t('consultation.options.paid.title')}</h3>
-                <p className="text-2xl font-bold text-gray-800 mb-4">{t('consultation.options.paid.price')}</p>
-                <p className="text-gray-600 mb-6">{t('consultation.options.paid.description')}</p>
-                <a
-                  href="https://cal.com/jose.moya/60?user=Jose.Moya"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors duration-200"
-                >
-                  {t('consultation.cta.paid')}
-                </a>
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border-2 border-gray-800 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{t('consultation.options.paid.title')}</h3>
+                  <p className="text-2xl font-bold text-gray-800 mb-4">{t('consultation.options.paid.price')}</p>
+                  <p className="text-gray-600">{t('consultation.options.paid.description')}</p>
+                </div>
+                <div className="mt-6">
+                  <a
+                    href="https://cal.com/jose.moya/60?user=Jose.Moya"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors duration-200"
+                  >
+                    {t('consultation.cta.paid')}
+                  </a>
+                </div>
               </div>
             </div>
             
