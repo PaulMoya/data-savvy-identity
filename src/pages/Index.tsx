@@ -1,12 +1,12 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Calendar, Globe } from 'lucide-react';
+import { Mail, Github, Linkedin, Calendar } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import '../i18n/i18n';
 
 const Index = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -28,11 +28,6 @@ const Index = () => {
     show: { opacity: 1, y: 0 }
   };
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'es' : 'en';
-    i18n.changeLanguage(newLang);
-  };
-
   return (
     <div className="min-h-screen px-4 py-12 sm:px-6 lg:px-8">
       <motion.div
@@ -41,17 +36,7 @@ const Index = () => {
         variants={container}
         className="max-w-3xl mx-auto"
       >
-        <div className="backdrop-blur-sm bg-white/80 rounded-2xl shadow-lg p-8 sm:p-12 relative">
-          <motion.button
-            variants={item}
-            onClick={toggleLanguage}
-            className="absolute top-4 right-4 p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Globe className="w-6 h-6" />
-          </motion.button>
-
+        <div className="backdrop-blur-sm bg-white/80 rounded-2xl shadow-lg p-8 sm:p-12">
           <motion.div variants={item} className="text-center mb-8">
             <h1 className="text-4xl font-semibold text-gray-800 mb-4">
               {t('title')}
