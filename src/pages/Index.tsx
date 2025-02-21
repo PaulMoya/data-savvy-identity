@@ -1,9 +1,12 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Calendar } from 'lucide-react';
+import { Mail, Github, Linkedin, Calendar, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import '../i18n/i18n';
 
 const Index = () => {
+  const { t, i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -25,6 +28,11 @@ const Index = () => {
     show: { opacity: 1, y: 0 }
   };
 
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'es' : 'en';
+    i18n.changeLanguage(newLang);
+  };
+
   return (
     <div className="min-h-screen px-4 py-12 sm:px-6 lg:px-8">
       <motion.div
@@ -33,12 +41,22 @@ const Index = () => {
         variants={container}
         className="max-w-3xl mx-auto"
       >
-        <div className="backdrop-blur-sm bg-white/80 rounded-2xl shadow-lg p-8 sm:p-12">
+        <div className="backdrop-blur-sm bg-white/80 rounded-2xl shadow-lg p-8 sm:p-12 relative">
+          <motion.button
+            variants={item}
+            onClick={toggleLanguage}
+            className="absolute top-4 right-4 p-2 text-gray-600 hover:text-gray-900 transition-colors duration-200"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Globe className="w-6 h-6" />
+          </motion.button>
+
           <motion.div variants={item} className="text-center mb-8">
             <h1 className="text-4xl font-semibold text-gray-800 mb-4">
-              José P. Moya
+              {t('title')}
               <span className="block text-xl font-normal text-gray-600 mt-2">
-                Data Engineer
+                {t('role')}
               </span>
             </h1>
           </motion.div>
@@ -47,16 +65,14 @@ const Index = () => {
             variants={item}
             className="text-lg text-gray-700 mb-6 leading-relaxed"
           >
-            I design and optimize data operations, automate workflows, and create insightful data outputs. 
-            Strong in <span className="font-medium">SQL, Python, cloud technologies</span>, and 
-            <span className="font-medium"> Visualizations</span>.
+            {t('description')}
           </motion.p>
 
           <motion.p
             variants={item}
             className="text-gray-600 mb-8"
           >
-            Industry Experience: Banking, Government Finance, Retail, Telecommunications, and BPO's.
+            {t('experience')}
           </motion.p>
 
           <motion.div
@@ -89,23 +105,17 @@ const Index = () => {
             className="bg-gray-50/80 rounded-xl p-8 mb-8"
           >
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              30 Minutes Data Assessment Call
+              {t('consultation.title')}
             </h2>
             <p className="text-gray-700 mb-6">
-              This 30-minute consultation is designed to understand your data operations 
-              challenges and determine the right next steps for your project.
+              {t('consultation.subtitle')}
             </p>
             
-            <h3 className="font-medium text-gray-800 mb-4">What You Get:</h3>
+            <h3 className="font-medium text-gray-800 mb-4">{t('consultation.whatYouGet')}</h3>
             <ul className="space-y-3 mb-6">
-              {[
-                'A brief discussion about your project goals and challenges',
-                'An initial assessment of your data infrastructure and tech stack',
-                'Insights on feasibility, scope, and next steps',
-                'Clarity on next steps for your project or recommend alternatives'
-              ].map((benefit, index) => (
+              {Object.keys(t('consultation.benefits', { returnObjects: true })).map((key) => (
                 <motion.li
-                  key={index}
+                  key={key}
                   className="flex items-start gap-2 text-gray-700"
                   variants={{
                     hidden: { opacity: 0, x: -20 },
@@ -115,14 +125,13 @@ const Index = () => {
                   <svg className="w-5 h-5 text-green-500 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>{benefit}</span>
+                  <span>{t(`consultation.benefits.${key}`)}</span>
                 </motion.li>
               ))}
             </ul>
             
             <p className="text-gray-700 mb-6">
-              Perfect for startups, businesses, or individuals looking to enhance their 
-              data operations strategy efficiently.
+              {t('consultation.perfect')}
             </p>
           </motion.div>
 
@@ -136,7 +145,7 @@ const Index = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-700 transition-colors duration-200 shadow-sm hover:shadow-md"
             >
-              Schedule a Free Consultation
+              {t('consultation.cta')}
             </a>
           </motion.div>
         </div>
