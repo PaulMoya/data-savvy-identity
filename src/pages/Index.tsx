@@ -125,7 +125,7 @@ const Index = () => {
                 </div>
                 <div className="mt-6">
                   <a
-                    href="https://cal.com/Jose.Moya"
+                    href="https://cal.com/jose.moya/1-hour-deep-dive"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors duration-200"
