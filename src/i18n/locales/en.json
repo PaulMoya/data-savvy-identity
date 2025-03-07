@@ -9,7 +9,7 @@
     "subtitle": "Choose the consultation option that best fits your needs.",
     "options": {
       "free": {
-        "title": "30-Minute Free Assessment",
+        "title": "20-Minute Free Assessment",
         "price": "Free",
         "description": "Quick overview and initial guidance for your data project"
       },
