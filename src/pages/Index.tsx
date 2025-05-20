@@ -74,6 +74,34 @@ const Index = () => {
             </p>
           </motion.div>
 
+          {/* Skills Section */}
+          <motion.div
+            variants={item}
+            className="bg-gray-50/80 rounded-xl p-8 mb-8"
+          >
+            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+              {t('skills.title')}
+            </h2>
+
+            <div className="space-y-6">
+              {Object.keys(t('skills.items', { returnObjects: true })).map((key) => (
+                <motion.div
+                  key={key}
+                  className="bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow"
+                  whileHover={{ y: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <h3 className="text-xl font-medium text-gray-800 mb-2">
+                    {t(`skills.items.${key}.title`)}
+                  </h3>
+                  <p className="text-gray-600">
+                    {t(`skills.items.${key}.description`)}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
           <motion.div
             variants={item}
             className="flex justify-center space-x-6 mb-12"
@@ -97,81 +125,6 @@ const Index = () => {
                 <span className="sr-only">{label}</span>
               </motion.a>
             ))}
-          </motion.div>
-
-          <motion.div
-            variants={item}
-            className="bg-gray-50/80 rounded-xl p-8 mb-8"
-          >
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              {t('consultation.title')}
-            </h2>
-            <p className="text-gray-700 mb-6">
-              {t('consultation.subtitle')}
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              {/* Free Consultation Card */}
-              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">{t('consultation.options.free.title')}</h3>
-                  <p className="text-2xl font-bold text-gray-800 mb-4">{t('consultation.options.free.price')}</p>
-                  <p className="text-gray-600">{t('consultation.options.free.description')}</p>
-                </div>
-                <div className="mt-6">
-                  <a
-                    href="https://cal.com/jose.moya/20"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center px-4 py-2 border border-gray-800 text-gray-800 rounded-md hover:bg-gray-800 hover:text-white transition-colors duration-200"
-                  >
-                    {t('consultation.cta.free')}
-                  </a>
-                </div>
-              </div>
-
-              {/* Paid Consultation Card */}
-              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border-2 border-gray-800 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">{t('consultation.options.paid.title')}</h3>
-                  <p className="text-2xl font-bold text-gray-800 mb-4">{t('consultation.options.paid.price')}</p>
-                  <p className="text-gray-600">{t('consultation.options.paid.description')}</p>
-                </div>
-                <div className="mt-6">
-                  <a
-                    href="https://cal.com/jose.moya/1-hour-deep-dive"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors duration-200"
-                  >
-                    {t('consultation.cta.paid')}
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <h3 className="font-medium text-gray-800 mb-4">{t('consultation.whatYouGet')}</h3>
-            <ul className="space-y-3 mb-6">
-              {Object.keys(t('consultation.benefits', { returnObjects: true })).map((key) => (
-                <motion.li
-                  key={key}
-                  className="flex items-start gap-2 text-gray-700"
-                  variants={{
-                    hidden: { opacity: 0, x: -20 },
-                    show: { opacity: 1, x: 0 }
-                  }}
-                >
-                  <svg className="w-5 h-5 text-green-500 shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>{t(`consultation.benefits.${key}`)}</span>
-                </motion.li>
-              ))}
-            </ul>
-            
-            <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-700 mb-6">
-              {t('consultation.perfect')}
-            </blockquote>
           </motion.div>
         </div>
       </motion.div>

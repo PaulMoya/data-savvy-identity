@@ -2,34 +2,27 @@
 {
   "title": "José P. Moya",
   "role": "Technology Sales Consultant",
-  "description": "I translate complex technology into business solutions that clients actually understand and want to implement. I connect people with the right tech to solve their challenges.",
-  "experience": "Proven experience across Banking, Government, Retail, Telecommunications, and Business Process Optimization.",
-  "consultation": {
-    "title": "Technology Consultation",
-    "subtitle": "Choose the option that works best for your business needs.",
-    "options": {
-      "free": {
-        "title": "20-Minute Free Assessment",
-        "price": "Free",
-        "description": "Quick evaluation of your technology needs and potential solutions"
+  "description": "No soy un vendedor más. Soy parte del sistema que transforma procesos complejos en soluciones simples y medibles.",
+  "experience": "Experiencia comprobada en Banca, Gobierno, Retail, Telecomunicaciones y Optimización de Procesos de Negocio.",
+  "skills": {
+    "title": "Habilidades Destacadas en Ventas SaaS",
+    "items": {
+      "1": {
+        "title": "Estrategia y Metodología de Ventas SaaS",
+        "description": "Diseño e implementación de estrategias B2B/B2C efectivas, apalancadas en metodologías de élite (Challenger, SPIN, MEDDIC, Sandler, Winning by Design) para startups, PYMEs y corporativos."
       },
-      "paid": {
-        "title": "1-Hour Deep Dive",
-        "price": "$150 USD",
-        "description": "Comprehensive analysis and personalized technology recommendation"
+      "2": {
+        "title": "Dominio del Ciclo de Ventas Completo",
+        "description": "Ejecución experta de cada etapa: prospección, cualificación avanzada (SQLs), discovery de valor, pitching persuasivo, negociación, cierre efectivo y expansión de cuentas (upsell/cross-sell)."
+      },
+      "3": {
+        "title": "Optimización de Operaciones y Sales Tech",
+        "description": "Mejora de procesos de ventas, dominio de CRM (Salesforce, HubSpot), gestión de pipeline, alineación con Customer Success, y uso estratégico de Sales Tech (Outreach, Gong) y KPIs para impulsar resultados."
+      },
+      "4": {
+        "title": "Especialización en Ventas SaaS para LatAm",
+        "description": "Adaptación y aplicación exitosa de tácticas y estrategias de ventas globales, validadas para el contexto y los desafíos del mercado tecnológico latinoamericano."
       }
-    },
-    "whatYouGet": "My Approach:",
-    "benefits": {
-      "1": "I listen first: Understanding your business challenges before discussing technology",
-      "2": "I speak your language: Translating technical features into business outcomes",
-      "3": "I focus on results: Demonstrating clear ROI and measurable improvements",
-      "4": "I build partnerships: Supporting you from demonstration to implementation"
-    },
-    "perfect": "\"José doesn't just sell technology — he helped us understand exactly how it would transform our operations. His consultative approach made all the difference.\" — Financial Sector Client",
-    "cta": {
-      "free": "Schedule a Quick Chat",
-      "paid": "Book In-Depth Consultation"
     }
   }
 }
