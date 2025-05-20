@@ -2,7 +2,7 @@
 {
   "title": "José P. Moya",
   "role": "Technology Sales Consultant",
-  "description": "I'm not just another salesperson. I'm part of the system that transforms complex processes into simple and measurable solutions.",
+  "description": "My job isn't to push products, it's to help you discover solutions. I'm part of the team obsessed with solving real problems using simple technology solutions that make sense. I am Qrioso",
   "experience": "Proven experience in Banking, Government, Retail, Telecommunications and Business Process Optimization.",
   "systemsThinking": "Professional with systems thinking, focused on:",
   "systemsThinkingPoints": {
@@ -10,7 +10,7 @@
     "2": "Translating technical challenges into simple, measurable, and scalable solutions.",
     "3": "Designing technology adoption processes that maximize customer value."
   },
-  "strategicMap": "Strategic and actionable map with:",
+  "strategicMap": "Strategic and actionable map:",
   "strategicMapItems": [
     "Consultative discovery models adapted to SaaS environments.",
     "Business problem prioritization frameworks for pre-sales stages.",
@@ -20,18 +20,18 @@
     "Impact KPIs and health metrics that measure solution implementation quality, not just sales closures.",
     "Examples of real cases where the sales process transformed the client's process (Slack, Atlassian, Notion, Deel, etc.)."
   ],
-  "objective": "The objective is to equip a curious professional with a technical background and product orientation with tools to:",
+  "objective": "Tools to:",
   "objectiveItems": [
     "Identify opportunities for improvement in organizations.",
     "Position solutions as enablers of change.",
     "Replace commercial speeches with proposals based on logic, evidence, and co-creation."
   ],
   "skills": {
-    "title": "Key SaaS Sales Skills",
+    "title": "Knowledge Associated with SaaS Sales",
     "items": {
       "1": {
         "title": "SaaS Sales Strategy & Methodology",
-        "description": "Effective B2B/B2C strategies using elite methodologies (Challenger, SPIN, MEDDIC, Sandler, Winning by Design)."
+        "description": "Effective B2B/B2C strategies using elite methodologies (Challenger, SPIN, MEDDIC, Sandler)."
       },
       "2": {
         "title": "Full Sales Cycle Mastery",

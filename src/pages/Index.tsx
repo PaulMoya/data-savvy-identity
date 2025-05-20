@@ -2,17 +2,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageSquare, 
-  Headset, 
-  Lightbulb, 
-  ChartBar, 
-  Handshake, 
-  Users, 
   PhoneCall, 
   Mail, 
   Github, 
   Linkedin,
-  Globe,
   Building,
   Landmark,
   Building2,
@@ -58,6 +51,15 @@ const Index = () => {
     { industry: "Telecomunicaciones", icon: Network },
     { industry: "Optimización de Procesos", icon: Settings },
   ];
+
+  // Fix TS errors by properly typing and ensuring systemsThinkingPoints is an object with keys
+  const systemsThinkingPointsEntries = Object.entries(t('systemsThinkingPoints', { returnObjects: true }) as Record<string, string>);
+  
+  // Fix TS errors by ensuring strategicMapItems is an array
+  const strategicMapItems = t('strategicMapItems', { returnObjects: true }) as string[];
+  
+  // Fix TS errors by ensuring objectiveItems is an array
+  const objectiveItems = t('objectiveItems', { returnObjects: true }) as string[];
 
   return (
     <div className="min-h-screen px-4 py-12 sm:px-6 lg:px-8">
@@ -121,13 +123,13 @@ const Index = () => {
               {t('systemsThinking')}
             </h2>
             <div className="space-y-3">
-              {Object.keys(t('systemsThinkingPoints', { returnObjects: true })).map((key) => (
+              {systemsThinkingPointsEntries.map(([key, value]) => (
                 <div key={key} className="flex items-start gap-3">
                   <div className="mt-0.5">
                     <CheckIcon className="h-5 w-5 text-green-500" />
                   </div>
                   <p className="text-gray-600">
-                    {t(`systemsThinkingPoints.${key}`)}
+                    {value}
                   </p>
                 </div>
               ))}
@@ -144,7 +146,7 @@ const Index = () => {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {Object.keys(t('skills.items', { returnObjects: true })).map((key) => (
+              {Object.keys(t('skills.items', { returnObjects: true }) as Record<string, any>).map((key) => (
                 <motion.div
                   key={key}
                   className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
@@ -169,7 +171,7 @@ const Index = () => {
             </h2>
             <div className="bg-white/90 rounded-lg p-5 shadow-sm">
               <ul className="space-y-3">
-                {t('strategicMapItems', { returnObjects: true }).map((item: string, index: number) => (
+                {strategicMapItems.map((item, index) => (
                   <li key={index} className="flex items-start gap-2">
                     <div className="mt-1 min-w-5">
                       <div className="h-2 w-2 rounded-full bg-primary"></div>
@@ -188,7 +190,7 @@ const Index = () => {
             </h2>
             <div className="bg-white/90 rounded-lg p-5 shadow-sm">
               <ul className="space-y-3">
-                {t('objectiveItems', { returnObjects: true }).map((item: string, index: number) => (
+                {objectiveItems.map((item, index) => (
                   <li key={index} className="flex items-start gap-2">
                     <div className="mt-1 min-w-5">
                       <LightbulbIcon className="h-4 w-4 text-amber-500" />
