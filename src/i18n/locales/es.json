@@ -10,17 +10,13 @@
     "2": "Traducir desafíos técnicos en soluciones simples, medibles y escalables.",
     "3": "Diseñar procesos de adopción tecnológica que maximicen valor para el cliente."
   },
-  "strategicMap": "Mapa estratégico y accionable:",
+  "strategicMap": "Practicas aplicables:",
   "strategicMapItems": [
-    "Modelos de descubrimiento consultivo adaptados a entornos SaaS.",
     "Frameworks de priorización de problemas de negocio para aplicar en etapas de preventa.",
     "Guiones o secuencias conversacionales para entender el contexto del cliente y co-diseñar soluciones.",
-    "Técnicas de visualización del retorno de inversión (ROI) para soluciones técnicas complejas.",
-    "Protocolos de orquestación de equipos de ventas, producto y customer success.",
-    "KPIs de impacto y health metrics que permitan medir la calidad de implementación de la solución, no solo el cierre de ventas.",
     "Ejemplos de casos reales donde el proceso de ventas transformó el proceso del cliente (Slack, Atlassian, Notion, Deel, etc.)."
   ],
-  "objective": "Herramientas para:",
+  "objective": "Habilidades para:",
   "objectiveItems": [
     "Identificar oportunidades de mejora en organizaciones.",
     "Posicionar soluciones como habilitadores del cambio.",
