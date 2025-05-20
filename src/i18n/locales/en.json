@@ -1,35 +1,35 @@
 
 {
   "title": "José P. Moya",
-  "role": "Data Engineer",
-  "description": "I design and optimize data operations, automate workflows, and create insightful data outputs. Strong in SQL, Python, cloud technologies, and Visualizations.",
-  "experience": "Industry Experience: Banking, Government Finance, Retail, Telecommunications, and BPO's.",
+  "role": "Technology Sales Consultant",
+  "description": "I translate complex technology into business solutions that clients actually understand and want to implement. I connect people with the right tech to solve their challenges.",
+  "experience": "Proven experience across Banking, Government, Retail, Telecommunications, and Business Process Optimization.",
   "consultation": {
-    "title": "Data Assessment Call",
-    "subtitle": "Choose the consultation option that best fits your needs.",
+    "title": "Technology Consultation",
+    "subtitle": "Choose the option that works best for your business needs.",
     "options": {
       "free": {
         "title": "20-Minute Free Assessment",
         "price": "Free",
-        "description": "Quick overview and initial guidance for your data project"
+        "description": "Quick evaluation of your technology needs and potential solutions"
       },
       "paid": {
         "title": "1-Hour Deep Dive",
         "price": "$150 USD",
-        "description": "Comprehensive analysis and detailed action plan"
+        "description": "Comprehensive analysis and personalized technology recommendation"
       }
     },
-    "whatYouGet": "What You Get:",
+    "whatYouGet": "My Approach:",
     "benefits": {
-      "1": "A brief discussion about your project goals and challenges",
-      "2": "An initial assessment of your data infrastructure and tech stack",
-      "3": "Insights on feasibility, scope, and next steps",
-      "4": "Clarity on next steps for your project or recommend alternatives"
+      "1": "I listen first: Understanding your business challenges before discussing technology",
+      "2": "I speak your language: Translating technical features into business outcomes",
+      "3": "I focus on results: Demonstrating clear ROI and measurable improvements",
+      "4": "I build partnerships: Supporting you from demonstration to implementation"
     },
-    "perfect": "Perfect for startups, businesses, or individuals looking to enhance their data operations strategy efficiently.",
+    "perfect": "\"José doesn't just sell technology — he helped us understand exactly how it would transform our operations. His consultative approach made all the difference.\" — Financial Sector Client",
     "cta": {
-      "free": "Schedule Free Consultation",
-      "paid": "Book Deep Dive Session"
+      "free": "Schedule a Quick Chat",
+      "paid": "Book In-Depth Consultation"
     }
   }
 }

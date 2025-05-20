@@ -1,6 +1,7 @@
+
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Calendar } from 'lucide-react';
+import { MessageSquare, Headset, Lightbulb, ChartBar, Handshake, Users, PhoneCall, Mail, Github, Linkedin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import '../i18n/i18n';
 
@@ -52,12 +53,26 @@ const Index = () => {
             {t('description')}
           </motion.p>
 
-          <motion.p
-            variants={item}
-            className="text-gray-600 mb-8"
-          >
-            {t('experience')}
-          </motion.p>
+          <motion.div variants={item} className="mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+              {[
+                { icon: MessageSquare, text: "Clear Communication" },
+                { icon: Handshake, text: "Building Trust" },
+                { icon: Lightbulb, text: "Tech Knowledge" },
+                { icon: ChartBar, text: "Sales Results" },
+                { icon: Headset, text: "Consultative Approach" },
+                { icon: Users, text: "Client Connection" }
+              ].map(({ icon: Icon, text }, index) => (
+                <div key={index} className="flex items-center gap-2 bg-white/90 rounded-lg p-3 shadow-sm">
+                  <Icon className="w-5 h-5 text-gray-700" />
+                  <span className="text-sm font-medium">{text}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-600">
+              {t('experience')}
+            </p>
+          </motion.div>
 
           <motion.div
             variants={item}
@@ -67,7 +82,7 @@ const Index = () => {
               { icon: Linkedin, href: 'https://www.linkedin.com/in/jose-moya-55820974/', label: 'LinkedIn' },
               { icon: Github, href: 'https://github.com/PaulMoya', label: 'GitHub' },
               { icon: Mail, href: 'mailto:josepaulmoya@gmail.com', label: 'Email' },
-              { icon: Calendar, href: 'https://cal.com/Jose.Moya', label: 'Calendar' }
+              { icon: PhoneCall, href: 'https://cal.com/Jose.Moya', label: 'Schedule a Call' }
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}
@@ -154,9 +169,9 @@ const Index = () => {
               ))}
             </ul>
             
-            <p className="text-gray-700 mb-6">
+            <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-700 mb-6">
               {t('consultation.perfect')}
-            </p>
+            </blockquote>
           </motion.div>
         </div>
       </motion.div>
