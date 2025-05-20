@@ -1,17 +1,40 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { MessageSquare, Headset, Lightbulb, ChartBar, Handshake, Users, PhoneCall, Mail, Github, Linkedin } from 'lucide-react';
+import { 
+  MessageSquare, 
+  Headset, 
+  Lightbulb, 
+  ChartBar, 
+  Handshake, 
+  Users, 
+  PhoneCall, 
+  Mail, 
+  Github, 
+  Linkedin,
+  Globe,
+  Building,
+  Landmark,
+  Building2,
+  Network,
+  Settings
+} from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import '../i18n/i18n';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 const Index = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   const container = {
     hidden: { opacity: 0 },
@@ -28,6 +51,14 @@ const Index = () => {
     show: { opacity: 1, y: 0 }
   };
 
+  const industryIcons = [
+    { industry: "Banca", icon: Building },
+    { industry: "Gobierno", icon: Landmark },
+    { industry: "Retail", icon: Building2 },
+    { industry: "Telecomunicaciones", icon: Network },
+    { industry: "Optimización de Procesos", icon: Settings },
+  ];
+
   return (
     <div className="min-h-screen px-4 py-12 sm:px-6 lg:px-8">
       <motion.div
@@ -37,6 +68,23 @@ const Index = () => {
         className="max-w-3xl mx-auto"
       >
         <div className="backdrop-blur-sm bg-white/80 rounded-2xl shadow-lg p-8 sm:p-12">
+          <div className="flex justify-end mb-4">
+            <div className="flex space-x-2">
+              <button 
+                className={`px-3 py-1 rounded-md ${i18n.language === 'en' ? 'bg-primary text-white' : 'bg-gray-200'}`}
+                onClick={() => changeLanguage('en')}
+              >
+                EN
+              </button>
+              <button 
+                className={`px-3 py-1 rounded-md ${i18n.language === 'es' ? 'bg-primary text-white' : 'bg-gray-200'}`}
+                onClick={() => changeLanguage('es')}
+              >
+                ES
+              </button>
+            </div>
+          </div>
+          
           <motion.div variants={item} className="text-center mb-8">
             <h1 className="text-4xl font-semibold text-gray-800 mb-4">
               {t('title')}
@@ -54,47 +102,59 @@ const Index = () => {
           </motion.p>
 
           <motion.div variants={item} className="mb-8">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-              {[
-                { icon: MessageSquare, text: "Clear Communication" },
-                { icon: Handshake, text: "Building Trust" },
-                { icon: Lightbulb, text: "Tech Knowledge" },
-                { icon: ChartBar, text: "Sales Results" },
-                { icon: Headset, text: "Consultative Approach" },
-                { icon: Users, text: "Client Connection" }
-              ].map(({ icon: Icon, text }, index) => (
-                <div key={index} className="flex items-center gap-2 bg-white/90 rounded-lg p-3 shadow-sm">
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
+              {industryIcons.map(({ industry, icon: Icon }) => (
+                <div key={industry} className="flex items-center gap-2 bg-white/90 rounded-lg p-3 shadow-sm">
                   <Icon className="w-5 h-5 text-gray-700" />
-                  <span className="text-sm font-medium">{text}</span>
+                  <span className="text-sm font-medium">{industry}</span>
                 </div>
               ))}
             </div>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-center">
               {t('experience')}
             </p>
           </motion.div>
 
-          {/* Skills Section */}
+          {/* Systems Thinking Section */}
+          <motion.div variants={item} className="mb-8">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              {t('systemsThinking')}
+            </h2>
+            <div className="space-y-3">
+              {Object.keys(t('systemsThinkingPoints', { returnObjects: true })).map((key) => (
+                <div key={key} className="flex items-start gap-3">
+                  <div className="mt-0.5">
+                    <CheckIcon className="h-5 w-5 text-green-500" />
+                  </div>
+                  <p className="text-gray-600">
+                    {t(`systemsThinkingPoints.${key}`)}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Skills Section - Condensed */}
           <motion.div
             variants={item}
-            className="bg-gray-50/80 rounded-xl p-8 mb-8"
+            className="bg-gray-50/80 rounded-xl p-6 mb-8"
           >
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">
               {t('skills.title')}
             </h2>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {Object.keys(t('skills.items', { returnObjects: true })).map((key) => (
                 <motion.div
                   key={key}
-                  className="bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
                   whileHover={{ y: -5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <h3 className="text-xl font-medium text-gray-800 mb-2">
+                  <h3 className="text-lg font-medium text-gray-800 mb-2">
                     {t(`skills.items.${key}.title`)}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 text-sm">
                     {t(`skills.items.${key}.description`)}
                   </p>
                 </motion.div>
@@ -102,10 +162,49 @@ const Index = () => {
             </div>
           </motion.div>
 
+          {/* Strategic Map Section */}
+          <motion.div variants={item} className="mb-8">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              {t('strategicMap')}
+            </h2>
+            <div className="bg-white/90 rounded-lg p-5 shadow-sm">
+              <ul className="space-y-3">
+                {t('strategicMapItems', { returnObjects: true }).map((item: string, index: number) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <div className="mt-1 min-w-5">
+                      <div className="h-2 w-2 rounded-full bg-primary"></div>
+                    </div>
+                    <p className="text-gray-600 text-sm">{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+
+          {/* Objective Section */}
+          <motion.div variants={item} className="mb-8">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              {t('objective')}
+            </h2>
+            <div className="bg-white/90 rounded-lg p-5 shadow-sm">
+              <ul className="space-y-3">
+                {t('objectiveItems', { returnObjects: true }).map((item: string, index: number) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <div className="mt-1 min-w-5">
+                      <LightbulbIcon className="h-4 w-4 text-amber-500" />
+                    </div>
+                    <p className="text-gray-600 text-sm">{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+
           <motion.div
             variants={item}
-            className="flex justify-center space-x-6 mb-12"
+            className="flex justify-center space-x-6 mb-6"
           >
+            <h3 className="sr-only">{t('contactLinks')}</h3>
             {[
               { icon: Linkedin, href: 'https://www.linkedin.com/in/jose-moya-55820974/', label: 'LinkedIn' },
               { icon: Github, href: 'https://github.com/PaulMoya', label: 'GitHub' },
@@ -131,5 +230,36 @@ const Index = () => {
     </div>
   );
 };
+
+// Custom icons
+const CheckIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M20 6L9 17l-5-5" />
+  </svg>
+);
+
+const LightbulbIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M9 18h6M12 2v5M12 12v1M12 22v-3M8 9a4 4 0 118 0 4 4 0 01-1.302 2.942c-.521.554-.9 1.258-1.078 2.058h-3.24c-.178-.8-.557-1.504-1.078-2.058A4 4 0 018 9z" />
+  </svg>
+);
 
 export default Index;

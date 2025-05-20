@@ -1,0 +1,52 @@
+
+{
+  "title": "José P. Moya",
+  "role": "Consultor de Ventas Tecnológicas",
+  "description": "No soy un vendedor más. Soy parte del sistema que transforma procesos complejos en soluciones simples y medibles.",
+  "experience": "Experiencia comprobada en Banca, Gobierno, Retail, Telecomunicaciones y Optimización de Procesos de Negocio.",
+  "systemsThinking": "Profesional con pensamiento de sistemas, enfocado en:",
+  "systemsThinkingPoints": {
+    "1": "Diagnosticar problemas estructurales en organizaciones que frenan la eficiencia.",
+    "2": "Traducir desafíos técnicos en soluciones simples, medibles y escalables.",
+    "3": "Diseñar procesos de adopción tecnológica que maximicen valor para el cliente."
+  },
+  "strategicMap": "Genera un mapa estratégico y accionable con:",
+  "strategicMapItems": [
+    "Modelos de descubrimiento consultivo adaptados a entornos SaaS.",
+    "Frameworks de priorización de problemas de negocio para aplicar en etapas de preventa.",
+    "Guiones o secuencias conversacionales para entender el contexto del cliente y co-diseñar soluciones.",
+    "Técnicas de visualización del retorno de inversión (ROI) para soluciones técnicas complejas.",
+    "Protocolos de orquestación de equipos de ventas, producto y customer success.",
+    "KPIs de impacto y health metrics que permitan medir la calidad de implementación de la solución, no solo el cierre de ventas.",
+    "Ejemplos de casos reales donde el proceso de ventas transformó el proceso del cliente (Slack, Atlassian, Notion, Deel, etc.)."
+  ],
+  "objective": "El objetivo es dotar a un profesional curioso, con background técnico y orientación a producto, de herramientas para:",
+  "objectiveItems": [
+    "Identificar oportunidades de mejora en organizaciones.",
+    "Posicionar soluciones como habilitadores del cambio.",
+    "Sustituir discursos comerciales por propuestas basadas en lógica, evidencia y co-creación."
+  ],
+  "skills": {
+    "title": "Habilidades Destacadas en Ventas SaaS",
+    "items": {
+      "1": {
+        "title": "Estrategia y Metodología de Ventas SaaS",
+        "description": "Estrategias B2B/B2C efectivas, con metodologías de élite (Challenger, SPIN, MEDDIC, Sandler)."
+      },
+      "2": {
+        "title": "Dominio del Ciclo de Ventas",
+        "description": "Prospección, cualificación, discovery, pitching, negociación, cierre y expansión de cuentas."
+      },
+      "3": {
+        "title": "Optimización de Operaciones",
+        "description": "Mejora de procesos, dominio de CRM, gestión de pipeline y uso estratégico de Sales Tech."
+      },
+      "4": {
+        "title": "Especialización en Ventas LatAm",
+        "description": "Adaptación de estrategias globales al contexto del mercado tecnológico latinoamericano."
+      }
+    }
+  },
+  "languageSelector": "Idioma",
+  "contactLinks": "Enlaces de Contacto"
+}
