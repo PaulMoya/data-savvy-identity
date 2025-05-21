@@ -15,7 +15,6 @@ import {
 import { useTranslation } from 'react-i18next';
 import '../i18n/i18n';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 
 const Index = () => {
   const { t, i18n } = useTranslation();
