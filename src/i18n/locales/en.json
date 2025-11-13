@@ -1,68 +1,35 @@
 
 {
   "title": "José P. Moya",
-  "role": "Technology Sales Consultant",
-  "description": "My job isn't to push products, it's to help you discover solutions. I'm part of the team obsessed with solving real problems using simple technology solutions that make sense. I am Qrioso",
-  "professionalProfile": {
-    "title": "Professional Profile",
-    "aboutRole": {
-      "title": "About My Role",
-      "content": "Throughout my professional experience, I have helped organizations adopt a data-driven culture, driving informed strategic decision-making and optimizing business performance. My approach combines business analysis, data intelligence, and strategic planning, with the goal of connecting key metrics to actual business outcomes."
-    },
-    "whatIDo": {
-      "title": "What I Do",
-      "items": [
-        "Promote a data-driven decision-making culture, training leaders and teams in the use of analytical frameworks and visualization tools.",
-        "Act as the owner of performance indicators, ensuring consistent definitions aligned with strategic objectives.",
-        "Lead strategic analyses combining financial and operational data to identify growth and efficiency opportunities.",
-        "Develop executive reports and insights that explain performance and key drivers behind business metrics.",
-        "Design and maintain performance measurement models to monitor strategy execution.",
-        "Support planning and forecasting processes, ensuring alignment between financial goals and long-term objectives.",
-        "Ensure operational risk management and compliance, fostering a culture of accountability and control.",
-        "Build and manage high-performance teams, driving an inclusive environment of continuous development."
-      ]
-    }
-  },
-  "experience": "Proven experience in Banking, Government, Retail, Telecommunications and Business Process Optimization.",
-  "systemsThinking": "Professional with systems thinking, focused on:",
-  "systemsThinkingPoints": {
-    "1": "Diagnosing structural problems in organizations that hinder efficiency.",
-    "2": "Translating technical challenges into simple, measurable, and scalable solutions.",
-    "3": "Designing technology adoption processes that maximize customer value."
-  },
-  "strategicMap": "Applicable practices:",
-  "strategicMapItems": [
-    "Frameworks for prioritizing business problems during pre-sales stages.",
-    "Conversational scripts or sequences to understand the client context and co-design solutions.",
-    "Examples of real cases where the sales process transformed the client's process (Slack, Atlassian, Notion, Deel, etc.)."
-  ],
-  "objective": "Skills for:",
-  "objectiveItems": [
-    "Identify opportunities for improvement in organizations.",
-    "Position solutions as enablers of change.",
-    "Replace commercial speeches with proposals based on logic, evidence, and co-creation."
-  ],
-  "skills": {
-    "title": "Knowledge Associated with SaaS Sales",
-    "items": {
-      "1": {
-        "title": "SaaS Sales Strategy & Methodology",
-        "description": "Effective B2B/B2C strategies using elite methodologies (Challenger, SPIN, MEDDIC, Sandler)."
+  "role": "Data Engineer",
+  "description": "I design and optimize data operations, automate workflows, and create insightful data outputs. Strong in SQL, Python, cloud technologies, and Visualizations.",
+  "experience": "Industry Experience: Banking, Government Finance, Retail, Telecommunications, and BPO's.",
+  "consultation": {
+    "title": "Data Assessment Call",
+    "subtitle": "Choose the consultation option that best fits your needs.",
+    "options": {
+      "free": {
+        "title": "20-Minute Free Assessment",
+        "price": "Free",
+        "description": "Quick overview and initial guidance for your data project"
       },
-      "2": {
-        "title": "Full Sales Cycle Mastery",
-        "description": "Prospecting, qualification, discovery, pitching, negotiation, closing, and account expansion."
-      },
-      "3": {
-        "title": "Operations & Sales Tech",
-        "description": "Sales process improvement, CRM expertise, pipeline management, and strategic use of sales technology."
-      },
-      "4": {
-        "title": "LatAm SaaS Sales Specialization",
-        "description": "Adapting global strategies to Latin American technology market challenges."
+      "paid": {
+        "title": "1-Hour Deep Dive",
+        "price": "$150 USD",
+        "description": "Comprehensive analysis and detailed action plan"
       }
+    },
+    "whatYouGet": "What You Get:",
+    "benefits": {
+      "1": "A brief discussion about your project goals and challenges",
+      "2": "An initial assessment of your data infrastructure and tech stack",
+      "3": "Insights on feasibility, scope, and next steps",
+      "4": "Clarity on next steps for your project or recommend alternatives"
+    },
+    "perfect": "Perfect for startups, businesses, or individuals looking to enhance their data operations strategy efficiently.",
+    "cta": {
+      "free": "Schedule Free Consultation",
+      "paid": "Book Deep Dive Session"
     }
-  },
-  "languageSelector": "Language",
-  "contactLinks": "Contact Links"
+  }
 }
