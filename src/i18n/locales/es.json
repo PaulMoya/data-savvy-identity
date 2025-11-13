@@ -1,0 +1,41 @@
+{
+  "title": "José P. Moya",
+  "role": "Ingeniero de Datos",
+  "description": "Diseño y optimizo las operaciones de tu negocio basándome en datos reales, automatizo flujos de trabajo y creo salidas de datos perspicaces. Fuerte en SQL, Python, tecnologías en la nube y Visualizaciones.",
+  "experience": "Experiencia comprobada en:",
+  "industries": {
+    "banking": "Banca",
+    "government": "Gobierno",
+    "retail": "Retail",
+    "telecommunications": "Telecomunicaciones",
+    "bpo": "Optimización de Procesos de Negocio"
+  },
+  "consultation": {
+    "title": "Llamada de Evaluación de Datos",
+    "subtitle": "Elige la opción de consulta que mejor se adapte a tus necesidades.",
+    "options": {
+      "free": {
+        "title": "Evaluación Gratuita de 20 Minutos",
+        "price": "Gratis",
+        "description": "Visión general rápida y orientación inicial para tu proyecto de datos"
+      },
+      "paid": {
+        "title": "Inmersión Profunda de 1 Hora",
+        "price": "$150 USD",
+        "description": "Análisis exhaustivo y plan de acción detallado"
+      }
+    },
+    "whatYouGet": "Lo Que Obtienes:",
+    "benefits": {
+      "1": "Una breve discusión sobre los objetivos y desafíos de tu proyecto",
+      "2": "Una evaluación inicial de tu infraestructura de datos y stack tecnológico",
+      "3": "Perspectivas sobre viabilidad, alcance y próximos pasos",
+      "4": "Claridad sobre los próximos pasos para tu proyecto o alternativas recomendadas"
+    },
+    "perfect": "Perfecto para startups, negocios o individuos que buscan mejorar su estrategia de operaciones de datos de manera eficiente.",
+    "cta": {
+      "free": "Agendar Consulta Gratuita",
+      "paid": "Reservar Sesión de Inmersión Profunda"
+    }
+  }
+}

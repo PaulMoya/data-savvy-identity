@@ -2,8 +2,15 @@
 {
   "title": "José P. Moya",
   "role": "Data Engineer",
-  "description": "I design and optimize data operations, automate workflows, and create insightful data outputs. Strong in SQL, Python, cloud technologies, and Visualizations.",
-  "experience": "Industry Experience: Banking, Government Finance, Retail, Telecommunications, and BPO's.",
+  "description": "I design and optimize your business operations based on real data, automate workflows, and create insightful data outputs. Strong in SQL, Python, cloud technologies, and Visualizations.",
+  "experience": "Proven experience in:",
+  "industries": {
+    "banking": "Banking",
+    "government": "Government",
+    "retail": "Retail",
+    "telecommunications": "Telecommunications",
+    "bpo": "Business Process Optimization"
+  },
   "consultation": {
     "title": "Data Assessment Call",
     "subtitle": "Choose the consultation option that best fits your needs.",

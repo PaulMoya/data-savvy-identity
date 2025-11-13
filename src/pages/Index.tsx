@@ -1,16 +1,30 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Calendar } from 'lucide-react';
+import { Mail, Github, Linkedin, Calendar, Landmark, Building2, ShoppingBag, Radio, Cog, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@/components/ui/button';
 import '../i18n/i18n';
 
 const Index = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'es' : 'en';
+    i18n.changeLanguage(newLang);
+  };
+
+  const industryIcons = {
+    banking: Landmark,
+    government: Building2,
+    retail: ShoppingBag,
+    telecommunications: Radio,
+    bpo: Cog
+  };
 
   const container = {
     hidden: { opacity: 0 },
@@ -36,6 +50,18 @@ const Index = () => {
         className="max-w-3xl mx-auto"
       >
         <div className="backdrop-blur-sm bg-white/80 rounded-2xl shadow-lg p-8 sm:p-12">
+          <div className="flex justify-end mb-4">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={toggleLanguage}
+              className="gap-2"
+            >
+              <Globe className="w-4 h-4" />
+              {i18n.language === 'en' ? 'ES' : 'EN'}
+            </Button>
+          </div>
+          
           <motion.div variants={item} className="text-center mb-8">
             <h1 className="text-4xl font-semibold text-gray-800 mb-4">
               {t('title')}
@@ -52,12 +78,25 @@ const Index = () => {
             {t('description')}
           </motion.p>
 
-          <motion.p
-            variants={item}
-            className="text-gray-600 mb-8"
-          >
-            {t('experience')}
-          </motion.p>
+          <motion.div variants={item} className="mb-8">
+            <p className="text-gray-600 mb-4 font-medium">{t('experience')}</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {Object.keys(t('industries', { returnObjects: true })).map((key) => {
+                const Icon = industryIcons[key as keyof typeof industryIcons];
+                return (
+                  <div
+                    key={key}
+                    className="flex flex-col items-center gap-2 p-4 bg-white/60 rounded-lg hover:bg-white/80 transition-colors"
+                  >
+                    <Icon className="w-6 h-6 text-gray-700" />
+                    <span className="text-sm text-gray-700 text-center">
+                      {t(`industries.${key}`)}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
 
           <motion.div
             variants={item}
