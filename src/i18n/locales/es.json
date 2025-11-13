@@ -3,6 +3,26 @@
   "title": "José P. Moya",
   "role": "Consultor de Ventas Tecnológicas",
   "description": "Mi trabajo no es empujar productos, es ayudarte a descubrir soluciones. Soy parte del equipo que se obsesiona por resolver problemas reales con soluciones tecnológicas simples que sí hacen sentido. Soy Qrioso",
+  "professionalProfile": {
+    "title": "Perfil Profesional",
+    "aboutRole": {
+      "title": "Sobre mi rol",
+      "content": "En mi experiencia profesional, he contribuido a que las organizaciones adopten una cultura basada en datos, impulsando la toma de decisiones estratégicas informadas y la optimización del desempeño empresarial. Mi enfoque combina análisis de negocio, inteligencia de datos y planeación estratégica, con el objetivo de conectar las métricas clave con los resultados reales del negocio."
+    },
+    "whatIDo": {
+      "title": "Lo que hago",
+      "items": [
+        "Promuevo una cultura de toma de decisiones informadas por datos, capacitando a líderes y equipos en el uso de marcos analíticos y herramientas de visualización.",
+        "Actúo como responsable de los indicadores de desempeño, asegurando definiciones coherentes y alineadas a los objetivos estratégicos.",
+        "Lidero análisis estratégicos que combinan datos financieros y operativos para detectar oportunidades de crecimiento y eficiencia.",
+        "Desarrollo reportes ejecutivos e insights que explican el rendimiento y los factores clave detrás de las métricas del negocio.",
+        "Diseño y mantengo modelos de medición de desempeño para monitorear la ejecución de estrategias.",
+        "Apoyo los procesos de planificación y forecast, garantizando la alineación entre las metas financieras y los objetivos a largo plazo.",
+        "Aseguro la gestión de riesgos operativos y de cumplimiento, fomentando una cultura de responsabilidad y control.",
+        "Construyo y gestiono equipos de alto rendimiento, impulsando un entorno inclusivo y de desarrollo continuo."
+      ]
+    }
+  },
   "experience": "Experiencia comprobada en Banca, Gobierno, Retail, Telecomunicaciones y Optimización de Procesos de Negocio.",
   "systemsThinking": "Profesional con pensamiento de sistemas, enfocado en:",
   "systemsThinkingPoints": {

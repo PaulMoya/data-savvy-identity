@@ -3,6 +3,26 @@
   "title": "José P. Moya",
   "role": "Technology Sales Consultant",
   "description": "My job isn't to push products, it's to help you discover solutions. I'm part of the team obsessed with solving real problems using simple technology solutions that make sense. I am Qrioso",
+  "professionalProfile": {
+    "title": "Professional Profile",
+    "aboutRole": {
+      "title": "About My Role",
+      "content": "Throughout my professional experience, I have helped organizations adopt a data-driven culture, driving informed strategic decision-making and optimizing business performance. My approach combines business analysis, data intelligence, and strategic planning, with the goal of connecting key metrics to actual business outcomes."
+    },
+    "whatIDo": {
+      "title": "What I Do",
+      "items": [
+        "Promote a data-driven decision-making culture, training leaders and teams in the use of analytical frameworks and visualization tools.",
+        "Act as the owner of performance indicators, ensuring consistent definitions aligned with strategic objectives.",
+        "Lead strategic analyses combining financial and operational data to identify growth and efficiency opportunities.",
+        "Develop executive reports and insights that explain performance and key drivers behind business metrics.",
+        "Design and maintain performance measurement models to monitor strategy execution.",
+        "Support planning and forecasting processes, ensuring alignment between financial goals and long-term objectives.",
+        "Ensure operational risk management and compliance, fostering a culture of accountability and control.",
+        "Build and manage high-performance teams, driving an inclusive environment of continuous development."
+      ]
+    }
+  },
   "experience": "Proven experience in Banking, Government, Retail, Telecommunications and Business Process Optimization.",
   "systemsThinking": "Professional with systems thinking, focused on:",
   "systemsThinkingPoints": {
